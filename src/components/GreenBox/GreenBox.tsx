@@ -17,11 +17,26 @@ const GreenBox = () => {
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshBasicMaterial({
       color: 0x00ff00,
-      wireframe: true,
     });
     var cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
     camera.position.z = 5;
+    new THREE.TextureLoader().load(
+      'https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      (texture) => {
+        //Update Texture
+        cube.material.map = texture;
+        cube.material.needsUpdate = true;
+      },
+      (xhr) => {
+        //Download Progress
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+      },
+      (error) => {
+        //Error CallBack
+        console.log('An error happened' + error);
+      }
+    );
     const animate = () => {
       requestAnimationFrame(animate);
       console.log(cube.rotation.x);
