@@ -1,10 +1,10 @@
 import React from 'react';
-import 'assets/utils/index.scss';
+import GreenBox from './GreenBox/GreenBox';
 
 const App = () => {
   return (
     <>
-      <div>React Mobx TS Setting</div>
+      <GreenBox />
     </>
   );
 };
