@@ -11,7 +11,10 @@ const GreenBox = () => {
       1000
     );
 
-    var renderer = new THREE.WebGLRenderer();
+    var renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     var geometry = new THREE.BoxGeometry(1, 1, 1);
