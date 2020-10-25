@@ -31,9 +31,11 @@
     "react-icons": "^3.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-three-fiber": "^5.1.4",
     "secure-ls": "^1.2.6",
     "styled-components": "^5.1.0",
-    "sweetalert2": "^9.10.2"
+    "sweetalert2": "^9.10.2",
+    "three": "^0.121.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
