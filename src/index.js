@@ -1,19 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Root from './Root';
 import * as serviceWorker from './serviceWorker';
-import { Provider } from 'mobx-react';
-import stores from './stores';
-import './styles/AllStyle.scss';
+import 'focus-within-polyfill';
 
-ReactDOM.render(
-  <Provider store ={stores}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </Provider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
