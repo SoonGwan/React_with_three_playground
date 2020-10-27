@@ -16,11 +16,13 @@ const HexahedronEffect = () => {
   const aspect = useMemo(() => new THREE.Vector2(size.width, size.height), [
     size,
   ]);
-  console.log(aspect);
+
   useEffect(() => void composer.current.setSize(size.width, size.height), [
     size,
   ]);
+
   useFrame(() => composer.current.render(), 2);
+
   return (
     <effectComposer ref={composer} args={[gl]}>
       <renderPass attachArray="passes" scene={scene} camera={camera} />

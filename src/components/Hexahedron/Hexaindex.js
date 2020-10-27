@@ -78,11 +78,11 @@ const Hexaindex = () => {
   return (
     <Canvas
       gl={{ antialias: true, alpha: false }}
-      camera={{ position: [2, 5, 15], near: 5, far: 20 }}
+      camera={{ position: [12, 5, 15], near: 5, far: 20 }}
       onCreated={({ gl }) => gl.setClearColor('lightpink')}
     >
       <ambientLight />
-      <pointLight position={[150, 150, 150]} intensity={0.55} />
+      <pointLight position={[150, 150, 150]} intensity={4.55} />
       <HexaBox />
       <HexahedronEffect />
     </Canvas>
