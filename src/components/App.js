@@ -5,12 +5,14 @@ import Hexaindex from './Hexahedron/Hexaindex';
 import './App.scss';
 import Drop from './Cannon/CannonIndex';
 import MaterialBoxView from './MaterialBox/MaterialBox';
+import TitleShapeScene from './TextShape/TextShape';
 const App = () => {
   return (
     <>
       <Box />
       <Hexaindex />
       <MaterialBoxView />
+      <TitleShapeScene />
       {/* <Drop /> */}
     </>
   );
