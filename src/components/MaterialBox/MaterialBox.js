@@ -10,6 +10,7 @@ const MetalBox = () => {
       generateMipmaps: true,
     })
   );
+  const [hover, setHover] = useState(false);
   const cubeCamera = useRef();
 
   useFrame(({ gl, scene }) => {
@@ -34,15 +35,21 @@ const MetalBox = () => {
         position={[0, 0, 0]}
         args={[0.1, 100, renderTarget]}
       />
-      <Box args={[2, 2, 2]}>
-        <meshPhysicalMaterial
-          color="#17a2b8"
-          envMap={renderTarget.texture}
-          metalness={1}
-          roughness={0}
-          antialias={true}
-        />
-      </Box>
+      <mesh
+        onPointerOver={(e) => setHover(true)}
+        onPointerOut={(e) => setHover(false)}
+      >
+        <Box args={[2, 2, 2]}>
+          <meshPhysicalMaterial
+            color={hover ? '#6be2f5' : '#17a2b8'}
+            envMap={renderTarget.texture}
+            metalness={1}
+            roughness={0}
+            antialias={true}
+          />
+        </Box>
+      </mesh>
+
       <OrbitControls />
       <ambientLight />
     </>
