@@ -38,7 +38,8 @@
     "secure-ls": "^1.2.6",
     "styled-components": "^5.1.0",
     "sweetalert2": "^9.10.2",
-    "three": "^0.121.1"
+    "three": "^0.121.1",
+    "underscore": "^1.11.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
