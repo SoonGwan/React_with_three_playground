@@ -1,0 +1,27 @@
+@mixin scroll($bkgColor) {
+  width: 100%;
+  height: 100vh;
+  background-color: $bkgColor;
+}
+
+* {
+}
+.one {
+  @include scroll(#fff);
+}
+
+.two {
+  @include scroll(red);
+}
+
+.three {
+  @include scroll(blue);
+}
+
+.four {
+  @include scroll(green);
+}
+
+.five {
+  @include scroll(grey);
+}
