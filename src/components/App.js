@@ -6,14 +6,18 @@ import './App.scss';
 import Drop from './Cannon/CannonIndex';
 import MaterialBoxView from './MaterialBox/MaterialBox';
 import TitleShapeScene from './TextShape/TextShape';
+import ScrollEffect from './scrollEffect/ScrollEffect';
+import IntroPage from './IntroPage/IntroPage';
 const App = () => {
   return (
     <>
-      <Box />
+      {/* <ScrollEffect /> */}
+      {/* <Box />
       <Hexaindex />
       <MaterialBoxView />
-      <TitleShapeScene />
+      <TitleShapeScene /> */}
       {/* <Drop /> */}
+      <IntroPage />
     </>
   );
 };
