@@ -32,7 +32,7 @@ const HexahedronEffect = () => {
         kernelRadius={0.6}
         maxDistance={0.03}
       />
-      <unrealBloomPass attachArray="passes" args={[aspect, 2, 1, 0.991]} />
+      <unrealBloomPass attachArray="pass  es" args={[aspect, 2, 1, 0.991]} />
       <shaderPass
         attachArray="passes"
         args={[FXAAShader]}
